@@ -34,8 +34,12 @@ const CustomerInfo = tw.div`px-5 lg:px-10 text-center md:text-left mt-4 md:mt-0`
 const CustomerName = tw.h5`font-bold text-lg lg:text-xl xl:text-2xl text-primary-500`;
 const CustomerTitle = tw.p`font-medium text-sm`;
 
-const QuotesLeft = tw(QuotesLeftIcon)`w-8 h-8 lg:w-10 lg:h-10 text-primary-500 absolute top-0 left-0`;
-const QuotesRight = tw(QuotesRightIcon)`w-8 h-8 lg:w-10 lg:h-10 text-primary-500 absolute bottom-0 right-0`;
+const QuotesLeft = tw(
+  QuotesLeftIcon
+)`w-8 h-8 lg:w-10 lg:h-10 text-primary-500 absolute top-0 left-0`;
+const QuotesRight = tw(
+  QuotesRightIcon
+)`w-8 h-8 lg:w-10 lg:h-10 text-primary-500 absolute bottom-0 right-0`;
 
 const SliderControlButtonContainer = styled.div`
   ${tw`absolute top-0 h-full flex items-end md:items-center z-20`}
@@ -69,50 +73,61 @@ const DecoratorBlob2 = tw(
   SvgDecoratorBlob2
 )`absolute w-32 bottom-0 right-0 -z-10 text-pink-500 opacity-15 transform translate-x-2/3 translate-y-8`;
 
-export default () => {
+const testimonial = [
+  {
+    imageSrc:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80",
+    quote:
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
+    customerName: "Charlotte Hale",
+    customerTitle: "CEO, Delos Inc.",
+  },
+  {
+    imageSrc:
+      "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
+    quote:
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
+    customerName: "Adam Cuppy",
+    customerTitle: "Founder, EventsNYC",
+  },
+  {
+    imageSrc:
+      "https://images.unsplash.com/photo-1580852300654-03c803a14e24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4.25&w=512&h=512&q=80",
+    quote:
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
+    customerName: "Steven Marcetti",
+    customerTitle: "Event Manager, Brite",
+  },
+];
+
+export default ({
+  heading = "OUR CUSTOMERS LOVE US",
+  testimonials = testimonial,
+}) => {
   /*
    * You can modify the testimonials shown by modifying the array below
    * You can add or remove objects from the array as you need.
    */
-  const testimonials = [
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80",
-      quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-      customerName: "Charlotte Hale",
-      customerTitle: "CEO, Delos Inc."
-    },
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
-      quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-      customerName: "Adam Cuppy",
-      customerTitle: "Founder, EventsNYC"
-    },
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1580852300654-03c803a14e24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4.25&w=512&h=512&q=80",
-      quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-      customerName: "Steven Marcetti",
-      customerTitle: "Event Manager, Brite"
-    }
-  ];
+
   return (
     <Container>
       <Content>
         <HeadingInfoContainer>
-          <HeadingTitle>Our Awesome Customers</HeadingTitle>
+          <HeadingTitle>{heading}</HeadingTitle>
           <HeadingDescription></HeadingDescription>
         </HeadingInfoContainer>
         <TestimonialSliderContainer>
-          <TestimonialSlider nextArrow={<NextArrow />} prevArrow={<PreviousArrow />}>
+          <TestimonialSlider
+            nextArrow={<NextArrow />}
+            prevArrow={<PreviousArrow />}
+          >
             {testimonials.map((testimonial, index) => (
               <Testimonial key={index}>
                 <ImageContainer>
-                  <img src={testimonial.imageSrc} alt={testimonial.customerName} />
+                  <img
+                    src={testimonial.imageSrc}
+                    alt={testimonial.customerName}
+                  />
                 </ImageContainer>
                 <TextContainer>
                   <QuoteContainer>
