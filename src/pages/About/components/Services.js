@@ -1,77 +1,109 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-import { css } from "styled-components/macro"; //eslint-disable-line
-import { ContentWithPaddingXl, Container } from "components/misc/Layouts.js";
-import {
-  SectionHeading as Heading,
-  Subheading as SubheadingBase,
-} from "components/misc/Headings.js";
-import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-7.svg";
-import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-8.svg";
+//eslint-disable-next-line
+import { css } from "styled-components/macro";
+import { SectionHeading } from "components/misc/Headings.js";
 
-const Subheading = tw(SubheadingBase)`text-center`;
-const Services = tw.div`flex flex-col lg:flex-row items-center lg:items-stretch`;
-const ServicesContainer = tw.div`mt-16 lg:w-1/3`;
-const Service = tw.div`px-4 text-center max-w-xs mx-auto flex flex-col items-center`;
-const Image = tw.img`w-20 h-20 rounded-full`;
-const Quote = tw.blockquote`mt-5 text-gray-600 font-medium leading-loose`;
-const ServiceName = tw.p`mt-5 text-gray-900 text-4xl font-black uppercase text-sm tracking-wide`;
+import defaultCardImage from "images/shield-icon.svg";
 
-const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
-  ${tw`pointer-events-none -z-20 absolute left-0 top-0 h-56 w-56 opacity-15 transform -translate-x-2/3 -translate-y-12 text-teal-400`}
+import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
+
+import SupportIconImage from "images/support-icon.svg";
+import ShieldIconImage from "images/shield-icon.svg";
+import CustomizeIconImage from "images/customize-icon.svg";
+import FastIconImage from "images/fast-icon.svg";
+import ReliableIconImage from "images/reliable-icon.svg";
+import SimpleIconImage from "images/simple-icon.svg";
+
+const Container = tw.div`relative`;
+
+const ThreeColumnContainer = styled.div`
+  ${tw`flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-xl mx-auto py-20 md:py-24`}
 `;
-const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
-  ${tw`pointer-events-none -z-20 absolute right-0 bottom-0 h-64 w-64 opacity-15 transform translate-x-2/3 text-yellow-500`}
+const Heading = tw(SectionHeading)`w-full`;
+
+const Column = styled.div`
+  ${tw`md:w-1/2 lg:w-1/3 px-6 flex`}
 `;
 
-export default ({
-  subheading = "Services",
-  heading = "What we Do",
-  services = [
+const Card = styled.div`
+  ${tw`flex flex-col mx-auto max-w-xs items-center px-6 py-10 border-2 border-dashed border-primary-500 rounded-lg mt-12`}
+  .imageContainer {
+    ${tw`border-2 border-primary-500 text-center rounded-full p-6 flex-shrink-0 relative`}
+    img {
+      ${tw`w-8 h-8`}
+    }
+  }
+
+  .textContainer {
+    ${tw`mt-6 text-center`}
+  }
+
+  .title {
+    ${tw`mt-2 font-bold text-xl leading-none text-primary-500`}
+  }
+
+  .description {
+    ${tw`mt-3 font-semibold text-secondary-100 text-sm leading-loose`}
+  }
+`;
+
+const DecoratorBlob = styled(SvgDecoratorBlob3)`
+  ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-48 `}
+`;
+
+export default () => {
+  /*
+   * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component):
+   *  1) imageSrc - the image shown at the top of the card
+   *  2) title - the title of the card
+   *  3) description - the description of the card
+   *  If a key for a particular card is not provided, a default value is used
+   */
+
+  const cards = [
     {
-      imageSrc:
-        "https://uploads-ssl.webflow.com/5f85aa9f0cd6a73652e67ae3/5fc6a19ece7225449ecbb3e4_feather2-17-white.svg",
-      quote:
+      imageSrc: FastIconImage,
+      title: "Matching",
+      description:
         "Receive matching vacancies that meet your criteria in different industries and sectors across Nigeria of your choosing",
-      serviceName: "Matching",
     },
     {
-      imageSrc:
-        "https://uploads-ssl.webflow.com/5f85aa9f0cd6a73652e67ae3/5fce32842336956d4eb8a3e8_cv-p-500.png",
-      quote:
-        "Kickstart your career with individual tailored CV that sets you apart.",
-      serviceName: "Presentation",
+      imageSrc: SimpleIconImage,
+      title: "Presentation",
+      description:
+        "Kickstart your career with a uniquw tailored CV that sets you apart",
     },
     {
-      imageSrc:
-        "https://uploads-ssl.webflow.com/5f85aa9f0cd6a73652e67ae3/5fc6c949c7d330ae0e8fc875_5fc6a0e1437e4009c381f310_iconmonstr-bar-chart-4-icon.png",
-      quote:
+      imageSrc: SupportIconImage,
+      title: "Guidance",
+      description:
         "We provide exceptional and data driven career advice including providing materials for your career advancement.",
-      serviceName: "Guidance",
     },
-  ],
-}) => {
+  ];
+
   return (
     <Container>
-      <ContentWithPaddingXl>
-        {subheading && <Subheading>{subheading}</Subheading>}
-        <Heading>{heading}</Heading>
-        <Services>
-          {services.map(({ imageSrc, serviceName, quote }, index) => (
-            <ServicesContainer key={index}>
-              <Service>
-                <ServiceName>{serviceName}</ServiceName>
-                <Image src={imageSrc} />
-                <Quote>"{quote}"</Quote>
-              </Service>
-            </ServicesContainer>
-          ))}
-        </Services>
-      </ContentWithPaddingXl>
-
-      <DecoratorBlob1 />
-      <DecoratorBlob2 />
+      <ThreeColumnContainer>
+        <Heading>
+          What We <span tw="text-primary-500">Do</span>
+        </Heading>
+        {cards.map((card, i) => (
+          <Column key={i}>
+            <Card>
+              <span className="imageContainer">
+                <img src={card.imageSrc} alt="" />
+              </span>
+              <span className="textContainer">
+                <span className="title">{card.title}</span>
+                <p className="description">{card.description}</p>
+              </span>
+            </Card>
+          </Column>
+        ))}
+      </ThreeColumnContainer>
+      <DecoratorBlob />
     </Container>
   );
 };
