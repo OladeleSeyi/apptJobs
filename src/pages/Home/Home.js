@@ -3,22 +3,16 @@ import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Hero from "./components/Hero";
-import Features from "components/features/ThreeColWithSideImage.js";
-import MainFeature from "components/features/TwoColWithButton.js";
+
 import MainFeature2 from "./components/About";
 import FeatureWithSteps from "./components/Steps";
 import Testimonial from "components/testimonials/TwoColumnWithImage";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
-import heroScreenshotImageSrc from "images/hero-screenshot-1.png";
 import macHeroScreenshotImageSrc from "images/hero-screenshot-2.png";
 import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
-import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
-import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
-import SimpleContactUs from "components/forms/SimpleContactUs";
-import TwoColContactUsWithIllustrationFullForm from "components/forms/TwoColContactUsWithIllustrationFullForm";
+
 import EmployeeForm from "./components/EmployeeForm";
-// import EmployeeForm from "./components/EmployeeForm";
 
 export default () => {
   const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
