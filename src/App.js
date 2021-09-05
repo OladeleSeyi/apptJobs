@@ -107,7 +107,7 @@ import ThankYouPage from "ThankYouPage.js";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "pages/Home";
-
+import About from "pages/About";
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
   // return <AnimationRevealPage disabled>xxxxxxxxxx</AnimationRevealPage>;
@@ -118,7 +118,9 @@ export default function App() {
         <Route exact path="/mine">
           <Home />
         </Route>
-
+        <Route exact path="/about">
+          <About />
+        </Route>
         <Route path="/components/:type/:subtype/:name">
           <ComponentRenderer />
         </Route>
