@@ -119,7 +119,7 @@ export default function App() {
     <Router>
       <Header />
       <Switch>
-        <Route exact path="/mine">
+        <Route exact path="/">
           <Home />
         </Route>
         <Route exact path="/about">
@@ -137,7 +137,7 @@ export default function App() {
         <Route path="/thank-you">
           <ThankYouPage />
         </Route>
-        <Route path="/">
+        <Route path="/mine">
           <MainLandingPage />
         </Route>
       </Switch>
