@@ -8,65 +8,99 @@ import MainFeature2 from "./components/About";
 import FeatureWithSteps from "./components/Steps";
 import Testimonial from "components/testimonials/TwoColumnWithImage";
 import CTA from "./components/CTA";
-import Footer from "./components/Footer";
 import macHeroScreenshotImageSrc from "images/hero-screenshot-2.png";
 import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
 
 import EmployeeForm from "./components/EmployeeForm";
+import Modal from "./components/Modal";
+import { pageDataOptions } from "./data";
+import EmployerForm from "./components/EmployerForm";
+
+// Styled Components
+const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
+const HighlightedText = tw.span`text-primary-500`;
 
 export default () => {
-  const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
-  const HighlightedText = tw.span`text-primary-500`;
+  // is the viewer an employee
+  const [isEmployee, setIsEmployee] = React.useState(
+    () => window.localStorage.getItem("userType") || null
+  );
+  // Open Or close modal
+  const [showModal, setShowModal] = React.useState(() =>
+    isEmployee ? false : true
+  );
+  // Set Appropriate UI Text
+  const [{ hero, mainFeature }, setPageData] = React.useState(
+    pageDataOptions.employee
+  );
+  const chooseStatus = (bool) => {
+    if (bool) {
+      setIsEmployee(bool);
+      setPageData(pageDataOptions.employee);
+      return setShowModal(false);
+    }
+    setIsEmployee(bool);
+    setPageData(pageDataOptions.employer);
+    return setShowModal(false);
+  };
+  console.log("apt", window.localStorage.getItem("userType"));
+
+  React.useEffect(() => {
+    console.log("useeffect", window.localStorage.getItem("userType"));
+    window.localStorage.setItem("userType", isEmployee);
+  }, [isEmployee]);
 
   return (
     <AnimationRevealPage disabled>
-      <Hero roundedHeaderButton={true} />
+      <Hero
+        heading={hero.heading}
+        paragraph={hero.paragraph}
+        roundedHeaderButton={true}
+      />
+      {/* Main Gist  */}
       <MainFeature2
-        subheading={<Subheading>VACANCIES ON THE FLY</Subheading>}
-        description={
-          "We aim to relieve the stress and time it takes to search for jobs and also provide career enhancing opportunities to every job seeker."
-        }
-        heading={
-          <>
-            <HighlightedText>Focus</HighlightedText> on the jobs you want.
-          </>
-        }
+        subheading={mainFeature.subheading}
+        description={mainFeature.description}
+        heading={mainFeature.heading}
         imageSrc={prototypeIllustrationImageSrc}
         showDecoratorBlob={false}
         features={[]}
       />
-      {/* <Features
-        subheading={<Subheading>Features</Subheading>}
-        heading={
-          <>
-            We have Amazing <HighlightedText>Service.</HighlightedText>
-          </>
-        }
-      /> */}
+      {/* End Main Gist  */}
 
-      <FeatureWithSteps
-        subheading={<Subheading>STEPS</Subheading>}
-        heading={
-          <>
-            Very Easy to <HighlightedText>Get Started.</HighlightedText>
-          </>
-        }
-        textOnLeft={false}
-        imageSrc={macHeroScreenshotImageSrc}
-        imageDecoratorBlob={true}
-        decoratorBlobCss={tw`xl:w-40 xl:h-40 opacity-15 -translate-x-1/2 left-1/2`}
+      {/* Modal */}
+      <Modal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        chooseStatus={chooseStatus}
       />
-      {/* <EmployeeForm /> */}
-      <EmployeeForm />
+      {/* Modal */}
+      {console.log("isemployee", isEmployee)}
+      {isEmployee ? null : (
+        <FeatureWithSteps
+          subheading={<Subheading>STEPS</Subheading>}
+          heading={
+            <>
+              <HighlightedText>Get Started.</HighlightedText>
+            </>
+          }
+          textOnLeft={false}
+          imageSrc={macHeroScreenshotImageSrc}
+          imageDecoratorBlob={true}
+          decoratorBlobCss={tw`xl:w-40 xl:h-40 opacity-15 -translate-x-1/2 left-1/2`}
+        />
+      )}
+      {/* Form  */}
+      {isEmployee ? <EmployeeForm /> : <EmployerForm />}
+      {/* End Form  */}
 
+      {/* Testimonial */}
       <Testimonial
-        // subheading={<Subheading>Testimonials</Subheading>}
         heading={
           <>
             Our Clients <HighlightedText>Love Us.</HighlightedText>
           </>
         }
-        // description=""
         testimonials={[
           {
             imageSrc:
@@ -96,8 +130,8 @@ export default () => {
           },
         ]}
       />
+      {/* Testimonial */}
       <CTA />
-      <Footer />
     </AnimationRevealPage>
   );
 };

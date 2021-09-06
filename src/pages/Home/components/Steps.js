@@ -65,17 +65,16 @@ export default ({
   const defaultSteps = [
     {
       heading: "Register",
-      description: "Create an account with us using Google or Facebook.",
+      description: "Fill the form below to register the vacancy.",
     },
     {
-      heading: "Download",
-      description:
-        "Browse and Download the template that you like from the marketplace.",
+      heading: "Algorthymic Matching ",
+      description: "We will direct the right candidates to apply.",
     },
     {
-      heading: "Run",
+      heading: "Interview",
       description:
-        "Follow the instructions to setup and customize the template to your needs.",
+        "Proceed to interview the candidates that meet your requirements",
     },
   ];
 

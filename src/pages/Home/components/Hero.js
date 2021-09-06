@@ -22,25 +22,30 @@ const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
   ${tw`pointer-events-none opacity-5 absolute left-0 bottom-0 h-64 w-64 transform -translate-x-2/3 -z-10`}
 `;
 
-export default ({ roundedHeaderButton }) => {
+export default ({
+  roundedHeaderButton,
+  heading = (
+    <>
+      We <span tw="text-primary-500">Hunt</span> you
+      <span tw="text-primary-500">Apply</span>
+    </>
+  ),
+  paragraph = "Automate your Job Search On WhatsApp Get Started",
+  img = DesignIllustration,
+}) => {
   return (
     <>
       <Container>
         <TwoColumn>
           <LeftColumn>
-            <Heading>
-              We <span tw="text-primary-500">Hunt</span> you{" "}
-              <span tw="text-primary-500">Apply</span>
-            </Heading>
-            <Paragraph>
-              Automate your Job Search On WhatsApp Get Started
-            </Paragraph>
+            <Heading>{heading}</Heading>
+            <Paragraph>{paragraph}</Paragraph>
           </LeftColumn>
           <RightColumn>
             <IllustrationContainer>
               <img
                 tw="min-w-0 w-full max-w-lg xl:max-w-3xl"
-                src={DesignIllustration}
+                src={img}
                 alt="Design Illustration"
               />
             </IllustrationContainer>
