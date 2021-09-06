@@ -26,9 +26,17 @@ export default () => {
     () => window.localStorage.getItem("userType") || null
   );
   // Open Or close modal
-  const [showModal, setShowModal] = React.useState(() =>
-    isEmployee ? false : true
-  );
+  const checkModal = () => {
+    if (isEmployee === null || isEmployee === "null") {
+      console.log("ran setModal and its null", isEmployee);
+      return true;
+    }
+    console.log("ran setModal and its null", isEmployee);
+    return false;
+  };
+  const [showModal, setShowModal] = React.useState(() => "HELLO");
+  checkModal();
+  console.log("showModal", showModal);
   // Set Appropriate UI Text
   const [{ hero, mainFeature }, setPageData] = React.useState(
     pageDataOptions.employee
@@ -43,7 +51,6 @@ export default () => {
     setPageData(pageDataOptions.employer);
     return setShowModal(false);
   };
-  console.log("apt", window.localStorage.getItem("userType"));
 
   React.useEffect(() => {
     console.log("useeffect", window.localStorage.getItem("userType"));

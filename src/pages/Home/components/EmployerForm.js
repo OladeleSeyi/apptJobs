@@ -7,7 +7,6 @@ import {
   Subheading as SubheadingBase,
 } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-import EmailIllustrationSrc from "images/email-illustration.svg";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -56,8 +55,8 @@ export default ({
   subheading = "GET EMPLOYED",
   heading = (
     <>
-      Find your <span tw="text-primary-500">Dream</span>
-      <wbr /> Job.
+      Find your <span tw="text-primary-500">Apt</span>
+      <wbr /> Candidate.
     </>
   ),
   description = "Fill the form to get updates of preferred vacancies.",
@@ -72,7 +71,7 @@ export default ({
     <Container>
       <TwoColumn>
         <ImageColumn>
-          <Image imageSrc={EmailIllustrationSrc} />
+          <Image imageSrc="./featureImage.png" />
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
