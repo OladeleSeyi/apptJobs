@@ -4,8 +4,6 @@ import tw from "twin.macro";
 //eslint-disable-next-line
 import { css } from "styled-components/macro";
 
-import Header from "components/headers/light.js";
-
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-1.svg";
 import DesignIllustration from "images/design-illustration-2.svg";
 
@@ -27,7 +25,6 @@ const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
 export default ({ roundedHeaderButton }) => {
   return (
     <>
-      <Header roundedHeaderButton={roundedHeaderButton} />
       <Container>
         <TwoColumn>
           <LeftColumn>

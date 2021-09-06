@@ -40,10 +40,10 @@ export default () => {
             <LogoText>APPT</LogoText>
           </LogoContainer>
           <LinksContainer>
-            <Link href="#">Home</Link>
-            <Link href="#">About</Link>
-            <Link href="#">Blog</Link>
-            <Link href="#">Contact Us</Link>
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="https://appticles.substack.com/">Blog</Link>
+            <Link href="/contact">Contact Us</Link>
           </LinksContainer>
           <SocialLinksContainer>
             <SocialLink href="https://wa.me/message/H6LUUKPUCUEBN1">
