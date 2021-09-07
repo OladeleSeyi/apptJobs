@@ -22,21 +22,18 @@ const HighlightedText = tw.span`text-primary-500`;
 
 export default () => {
   // is the viewer an employee
-  const [isEmployee, setIsEmployee] = React.useState(
-    () => window.localStorage.getItem("userType") || null
+  const [isEmployee, setIsEmployee] = React.useState(() =>
+    JSON.parse(window.localStorage.getItem("userType"))
   );
   // Open Or close modal
   const checkModal = () => {
     if (isEmployee === null || isEmployee === "null") {
-      console.log("ran setModal and its null", isEmployee);
       return true;
     }
-    console.log("ran setModal and its null", isEmployee);
     return false;
   };
-  const [showModal, setShowModal] = React.useState(() => "HELLO");
-  checkModal();
-  console.log("showModal", showModal);
+  const [showModal, setShowModal] = React.useState(checkModal);
+
   // Set Appropriate UI Text
   const [{ hero, mainFeature }, setPageData] = React.useState(
     pageDataOptions.employee
@@ -53,7 +50,6 @@ export default () => {
   };
 
   React.useEffect(() => {
-    console.log("useeffect", window.localStorage.getItem("userType"));
     window.localStorage.setItem("userType", isEmployee);
   }, [isEmployee]);
 
@@ -99,6 +95,7 @@ export default () => {
       )}
       {/* Form  */}
       {isEmployee ? <EmployeeForm /> : <EmployerForm />}
+      {/* <EmployeeForm /> */}
       {/* End Form  */}
 
       {/* Testimonial */}
