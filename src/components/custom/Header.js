@@ -98,10 +98,10 @@ export default ({
     collapseBreakPointCssMap[collapseBreakpointClass];
 
   const defaultLogoLink = (
-    <LogoLink href="/">
-      <img src={logo} alt="logo" />
-      APPT JOBS
-    </LogoLink>
+		<LogoLink href='/'>
+			<img src={logo} alt='logo' />
+			Appt Jobs
+		</LogoLink>
   );
 
   logoLink = logoLink || defaultLogoLink;

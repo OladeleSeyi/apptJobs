@@ -23,36 +23,42 @@ const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
 `;
 
 export default ({
-  roundedHeaderButton,
-  heading = (
-    <>
-      We <span tw="text-primary-500">Hunt</span> you
-      <span tw="text-primary-500">Apply</span>
-    </>
-  ),
-  paragraph = "Automate your Job Search On WhatsApp Get Started",
-  img = DesignIllustration,
+	roundedHeaderButton,
+	heading = (
+		<>
+			We <span tw='text-primary-500'>Hunt</span> you
+			<span tw='text-primary-500'>Apply</span>
+		</>
+	),
+	paragraph = 'Automate your Job Search On WhatsApp',
+	span = (
+		<a href='https://google.com'>
+			<button>Get Started</button>
+		</a>
+	),
+	img = DesignIllustration,
 }) => {
-  return (
-    <>
-      <Container>
-        <TwoColumn>
-          <LeftColumn>
-            <Heading>{heading}</Heading>
-            <Paragraph>{paragraph}</Paragraph>
-          </LeftColumn>
-          <RightColumn>
-            <IllustrationContainer>
-              <img
-                tw="min-w-0 w-full max-w-lg xl:max-w-3xl"
-                src={img}
-                alt="Design Illustration"
-              />
-            </IllustrationContainer>
-          </RightColumn>
-        </TwoColumn>
-        <DecoratorBlob1 />
-      </Container>
-    </>
-  );
+	return (
+		<>
+			<Container>
+				<TwoColumn>
+					<LeftColumn>
+						<Heading>{heading}</Heading>
+						<Paragraph>{paragraph}</Paragraph>
+						<a>{span}</a>
+					</LeftColumn>
+					<RightColumn>
+						<IllustrationContainer>
+							<img
+								tw='min-w-0 w-full max-w-lg xl:max-w-3xl'
+								src={img}
+								alt='Design Illustration'
+							/>
+						</IllustrationContainer>
+					</RightColumn>
+				</TwoColumn>
+				<DecoratorBlob1 />
+			</Container>
+		</>
+	);
 };
