@@ -15,13 +15,7 @@ export const pageDataOptions = {
 					<HighlightedText>Apply</HighlightedText>
 				</>
 			),
-			paragraph: 'Automate your Job Search On WhatsApp Get Strted',
-
-			span: (
-				<a href='https://google.com'>
-					<button>Get Started</button>
-				</a>
-			),
+			paragraph: 'Automate your Job Search On WhatsApp Get Started',
 
 			img: 'null',
 		},
