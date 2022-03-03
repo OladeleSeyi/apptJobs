@@ -39,54 +39,57 @@ const Heading = tw(
 const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
 
 export default ({
-  subheading = "Our Expertise",
-  heading = (
-    <>
-      Designed & Developed by <span tw="text-primary-500">Professionals.</span>
-    </>
-  ),
-  description = (
-    <>
-      Appt Jobs delivers specific vacancies and career opportunities to
-      individuals seeking jobs via Whatsapp.
-      <br />
-      <span tw="text-primary-500"> Why WhatsApp? </span> It is the preferred
-      social messaging application. Appt Jobs aims to take the bulk off job
-      hunting from the individual.
-    </>
-  ),
-  imageSrc = TeamIllustrationSrc,
-  imageRounded = true,
-  imageBorder = false,
-  imageShadow = false,
-  imageCss = null,
-  imageDecoratorBlob = false,
-  imageDecoratorBlobCss = null,
-  textOnLeft = true,
+	subheading = 'Our Expertise',
+	heading = (
+		<>
+			Designed & Developed by{' '}
+			<span tw='text-primary-500'>Professionals.</span>
+		</>
+	),
+	description = (
+		<>
+			Appt Jobs delivers specific vacancies and career opportunities to
+			individuals seeking jobs via Whatsapp.
+			<br />
+			<span tw='text-primary-500'> Why WhatsApp? </span> It is the
+			preferred social messaging application. Appt Jobs aims to take the
+			bulk off job hunting from the individual.
+		</>
+	),
+	imageSrc = TeamIllustrationSrc,
+	imageRounded = true,
+	imageBorder = false,
+	imageShadow = false,
+	imageCss = null,
+	imageDecoratorBlob = false,
+	imageDecoratorBlobCss = null,
+	textOnLeft = true,
 }) => {
-  // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
+	// The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
-  return (
-    <Container>
-      <TwoColumn>
-        <ImageColumn>
-          <Image
-            css={imageCss}
-            src={imageSrc}
-            imageBorder={imageBorder}
-            imageShadow={imageShadow}
-            imageRounded={imageRounded}
-          />
-          {imageDecoratorBlob && <DecoratorBlob css={imageDecoratorBlobCss} />}
-        </ImageColumn>
-        <TextColumn textOnLeft={textOnLeft}>
-          <TextContent>
-            <Subheading>{subheading}</Subheading>
-            <Heading>{heading}</Heading>
-            <Description>{description}</Description>
-          </TextContent>
-        </TextColumn>
-      </TwoColumn>
-    </Container>
-  );
+	return (
+		<Container>
+			<TwoColumn>
+				<ImageColumn>
+					<Image
+						css={imageCss}
+						src={imageSrc}
+						imageBorder={imageBorder}
+						imageShadow={imageShadow}
+						imageRounded={imageRounded}
+					/>
+					{imageDecoratorBlob && (
+						<DecoratorBlob css={imageDecoratorBlobCss} />
+					)}
+				</ImageColumn>
+				<TextColumn textOnLeft={textOnLeft}>
+					<TextContent>
+						<Subheading>{subheading}</Subheading>
+						<Heading>{heading}</Heading>
+						<Description>{description}</Description>
+					</TextContent>
+				</TextColumn>
+			</TwoColumn>
+		</Container>
+	);
 };

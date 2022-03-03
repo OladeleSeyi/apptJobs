@@ -33,36 +33,40 @@ const DecoratorBlob2 = tw(
   SvgDecoratorBlob1
 )`absolute top-0 right-0 w-80 h-80 transform  translate-x-20 -translate-y-64 text-primary-500 opacity-5`;
 export default ({
-  subheading = "Interested in APPT ?",
-  heading = "Start recieving preferred vacancies",
-  primaryLinkText = "Employees",
-  primaryLinkUrl = "http://timerse.com",
-  secondaryLinkText = "Employers",
-  secondaryLinkUrl = "http://google.com",
-  pushDownFooter = true,
+	subheading = 'Interested in APPT ?',
+	heading = 'Start recieving preferred vacancies',
+	primaryLinkText = 'Seekers',
+	primaryLinkUrl = 'http://timerse.com',
+	secondaryLinkText = 'Hunters',
+	secondaryLinkUrl = 'http://google.com',
+	pushDownFooter = true,
 }) => {
-  return (
-    <Container css={pushDownFooter && tw`mb-20 lg:mb-24`}>
-      <ContentWithPaddingXl>
-        <PrimaryBackgroundContainer>
-          <Row>
-            <TextContainer>
-              {subheading && <Subheading>{subheading}</Subheading>}
-              <Heading>{heading}</Heading>
-            </TextContainer>
-            <LinksContainer>
-              <PrimaryLink href={primaryLinkUrl}>{primaryLinkText}</PrimaryLink>
-              <SecondaryLink href={secondaryLinkUrl}>
-                {secondaryLinkText}
-              </SecondaryLink>
-            </LinksContainer>
-          </Row>
-          <DecoratorBlobContainer>
-            <DecoratorBlob1 />
-            <DecoratorBlob2 />
-          </DecoratorBlobContainer>
-        </PrimaryBackgroundContainer>
-      </ContentWithPaddingXl>
-    </Container>
-  );
+	return (
+		<Container css={pushDownFooter && tw`mb-20 lg:mb-24`}>
+			<ContentWithPaddingXl>
+				<PrimaryBackgroundContainer>
+					<Row>
+						<TextContainer>
+							{subheading && (
+								<Subheading>{subheading}</Subheading>
+							)}
+							<Heading>{heading}</Heading>
+						</TextContainer>
+						<LinksContainer>
+							<PrimaryLink href={primaryLinkUrl}>
+								{primaryLinkText}
+							</PrimaryLink>
+							<SecondaryLink href={secondaryLinkUrl}>
+								{secondaryLinkText}
+							</SecondaryLink>
+						</LinksContainer>
+					</Row>
+					<DecoratorBlobContainer>
+						<DecoratorBlob1 />
+						<DecoratorBlob2 />
+					</DecoratorBlobContainer>
+				</PrimaryBackgroundContainer>
+			</ContentWithPaddingXl>
+		</Container>
+	);
 };
