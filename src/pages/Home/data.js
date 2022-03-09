@@ -15,7 +15,7 @@ export const pageDataOptions = {
 					<HighlightedText>Apply</HighlightedText>
 				</>
 			),
-			paragraph: 'Automate your Job Search On WhatsApp Get Started',
+			// paragraph: 'Automate your Job Search On WhatsApp Get Started',
 
 			img: 'null',
 		},
@@ -40,7 +40,7 @@ export const pageDataOptions = {
 					<HighlightedText>Interview</HighlightedText>
 				</>
 			),
-			paragraph: 'Autoimate your headhunting process',
+			paragraph: 'Automate your headhunting process',
 			img: 'null',
 		},
 		mainFeature: {

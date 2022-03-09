@@ -7,6 +7,8 @@ import { css } from "styled-components/macro";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-1.svg";
 import DesignIllustration from "images/design-illustration-2.svg";
 
+import { PrimaryButton as PrimaryButtonBase } from 'components/misc/Buttons.js';
+
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
 const LeftColumn = tw.div`relative lg:w-5/12 text-center max-w-lg mx-auto lg:max-w-none lg:text-left`;
@@ -19,8 +21,13 @@ const IllustrationContainer = tw.div`flex justify-center lg:justify-end items-ce
 
 // Random Decorator Blobs (shapes that you see in background)
 const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
-  ${tw`pointer-events-none opacity-5 absolute left-0 bottom-0 h-64 w-64 transform -translate-x-2/3 -z-10`}
+	${tw`pointer-events-none opacity-5 absolute left-0 bottom-0 h-64 w-64 transform -translate-x-2/3 -z-10`}
 `;
+
+const PrimaryButton = styled(PrimaryButtonBase)((props) => [
+	tw`mt-8 md:mt-8 text-sm inline-block mx-auto md:mx-0`,
+	props.buttonRounded && tw`rounded-full`,
+]);
 
 export default ({
 	roundedHeaderButton,
@@ -30,12 +37,29 @@ export default ({
 			<span tw='text-primary-500'>Apply</span>
 		</>
 	),
+
+	// <PrimaryButton as="a" href={primaryButtonUrl}>
+	//           {primaryButtonText}
+	//         </PrimaryButton>
+
+	primaryButtonText = 'Get Started',
+	primaryButtonUrl = 'https://wa.me/message/H6LUUKPUCUEBN1',
+	buttonRounded = true,
+	Target = '_blank',
+
+	// span = (
+	// 	<button>
+	// 		<a
+	// 			href='https://wa.me/message/H6LUUKPUCUEBN1'
+	// 			target={'_blank'}
+	// 			rel='noreferrer'>
+	// 			Get Started
+	// 		</a>
+	// 	</button>
+	// ),
+
 	paragraph = 'Automate your Job Search On WhatsApp',
-	span = (
-		<a href='https://google.com'>
-			<button>Get Started</button>
-		</a>
-	),
+
 	img = DesignIllustration,
 }) => {
 	return (
@@ -45,7 +69,13 @@ export default ({
 					<LeftColumn>
 						<Heading>{heading}</Heading>
 						<Paragraph>{paragraph}</Paragraph>
-						<a>{span}</a>
+						<PrimaryButton
+							buttonRounded={buttonRounded}
+							as='a'
+							href={primaryButtonUrl}
+							target={Target}>
+							{primaryButtonText}
+						</PrimaryButton>
 					</LeftColumn>
 					<RightColumn>
 						<IllustrationContainer>
