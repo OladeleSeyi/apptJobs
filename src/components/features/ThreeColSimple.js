@@ -51,67 +51,76 @@ const DecoratorBlob = styled(SvgDecoratorBlob3)`
 `;
 
 export default ({
-  cards = [
-    {
-      imageSrc: ShieldIconImage,
-      title: "Secure",
-      description: "We strictly only deal with vendors that provide top notch security.",
-      url: "https://timerse.com"
-    },
-    {
-      imageSrc: SupportIconImage,
-      title: "24/7 Support",
-      description: "Lorem ipsum donor amet siti ceali placeholder text",
-      url: "https://google.com"
-    },
-    {
-      imageSrc: CustomizeIconImage,
-      title: "Customizable",
-      description: "Lorem ipsum donor amet siti ceali placeholder text",
-      url: "https://reddit.com"
-    }
-  ],
-  linkText = "Learn More",
-  heading = "",
-  subheading = "",
-  description = "",
-  imageContainerCss = null,
-  imageCss = null
+	cards = [
+		{
+			imageSrc: ShieldIconImage,
+			title: 'Secure',
+			description:
+				'We strictly only deal with vendors that provide top notch security.',
+			url: 'https://timerse.com',
+		},
+		{
+			imageSrc: SupportIconImage,
+			title: '24/7 Support',
+			description: 'Lorem ipsum donor amet siti ceali placeholder text',
+			url: 'https://google.com',
+		},
+		{
+			imageSrc: CustomizeIconImage,
+			title: 'Customizable',
+			description: 'Lorem ipsum donor amet siti ceali placeholder text',
+			url: 'https://reddit.com',
+		},
+	],
+	linkText = 'Learn More',
+	heading = '',
+	subheading = '',
+	description = '',
+	imageContainerCss = null,
+	imageCss = null,
 }) => {
-  /*
-   * This componets accepts a prop - `cards` which is an array of object denoting the cards. Each object in the cards array can have the following keys (Change it according to your need, you can also add more objects to have more cards in this feature component):
-   *  1) imageSrc - the image shown at the top of the card
-   *  2) title - the title of the card
-   *  3) description - the description of the card
-   *  4) url - the url that the card should goto on click
-   */
-  return (
-    <Container>
-      <ContentWithPaddingXl>
-        {subheading && <Subheading>{subheading}</Subheading>}
-        {heading && <Heading>{heading}</Heading>}
-        {description && <Description>{description}</Description>}
-        <ThreeColumnContainer>
-          {cards.map((card, i) => (
-            <Column key={i}>
-              <Card href={card.url}>
-                <span className="imageContainer" css={imageContainerCss}>
-                  <img src={card.imageSrc} alt="" css={imageCss} />
-                </span>
-                <span className="title">{card.title}</span>
-                <p className="description">{card.description}</p>
-                {linkText && (
-                  <span className="link">
-                    <span>{linkText}</span>
-                    <ArrowRightIcon className="icon" />
-                  </span>
-                )}
-              </Card>
-            </Column>
-          ))}
-        </ThreeColumnContainer>
-      </ContentWithPaddingXl>
-      <DecoratorBlob />
-    </Container>
-  );
+	/*
+	 * This componets accepts a prop - `cards` which is an array of object denoting the cards. Each object in the cards array can have the following keys (Change it according to your need, you can also add more objects to have more cards in this feature component):
+	 *  1) imageSrc - the image shown at the top of the card
+	 *  2) title - the title of the card
+	 *  3) description - the description of the card
+	 *  4) url - the url that the card should goto on click
+	 */
+	return (
+		<Container>
+			<ContentWithPaddingXl>
+				{subheading && <Subheading>{subheading}</Subheading>}
+				{heading && <Heading>{heading}</Heading>}
+				{description && <Description>{description}</Description>}
+				<ThreeColumnContainer>
+					{cards.map((card, i) => (
+						<Column key={i}>
+							<Card href={card.url}>
+								<span
+									className='imageContainer'
+									css={imageContainerCss}>
+									<img
+										src={card.imageSrc}
+										alt=''
+										css={imageCss}
+									/>
+								</span>
+								<span className='title'>{card.title}</span>
+								<p className='description'>
+									{card.description}
+								</p>
+								{linkText && (
+									<span className='link'>
+										<span>{linkText}</span>
+										<ArrowRightIcon className='icon' />
+									</span>
+								)}
+							</Card>
+						</Column>
+					))}
+				</ThreeColumnContainer>
+			</ContentWithPaddingXl>
+			<DecoratorBlob />
+		</Container>
+	);
 };

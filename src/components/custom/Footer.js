@@ -32,38 +32,38 @@ const SocialLink = styled.a`
 const CopyrightText = tw.p`text-center mt-10 font-medium tracking-wide text-sm text-gray-600`;
 export default () => {
   return (
-    <Container>
-      <Content>
-        <Row>
-          <LogoContainer>
-            <LogoImg src={logo} />
-            <LogoText>APPT</LogoText>
-          </LogoContainer>
-          <LinksContainer>
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="https://appticles.substack.com/">Blog</Link>
-            <Link href="/contact">Contact Us</Link>
-          </LinksContainer>
-          <SocialLinksContainer>
-            <SocialLink href="https://wa.me/message/H6LUUKPUCUEBN1">
-              <WhatsappIcon />
-            </SocialLink>
-            <SocialLink href="https://twitter.com/apptjobs?s=21">
-              <InstagramIcon />
-            </SocialLink>
-            <SocialLink href="@ApptJobs">
-              <TwitterIcon />
-            </SocialLink>
-            <SocialLink href="https://www.linkedin.com/company/appt-jobs">
-              <LinkedinIcon />
-            </SocialLink>
-          </SocialLinksContainer>
-          <CopyrightText>
-            &copy; Copyright 2021, APPT Jobs . All Rights Reserved.
-          </CopyrightText>
-        </Row>
-      </Content>
-    </Container>
+		<Container>
+			<Content>
+				<Row>
+					<LogoContainer>
+						<LogoImg src={logo} />
+						<LogoText>Appt</LogoText>
+					</LogoContainer>
+					<LinksContainer>
+						<Link href='/'>Home</Link>
+						<Link href='/about'>About</Link>
+						<Link href='https://appticles.substack.com/'>Blog</Link>
+						<Link href='/contact'>Contact Us</Link>
+					</LinksContainer>
+					<SocialLinksContainer>
+						<SocialLink href='https://wa.me/message/H6LUUKPUCUEBN1'>
+							<WhatsappIcon />
+						</SocialLink>
+						<SocialLink href='https://twitter.com/apptjobs?s=21'>
+							<InstagramIcon />
+						</SocialLink>
+						<SocialLink href='@ApptJobs'>
+							<TwitterIcon />
+						</SocialLink>
+						<SocialLink href='https://www.linkedin.com/company/appt-jobs'>
+							<LinkedinIcon />
+						</SocialLink>
+					</SocialLinksContainer>
+					<CopyrightText>
+						&copy; Copyright 2021, Appt Jobs . All Rights Reserved.
+					</CopyrightText>
+				</Row>
+			</Content>
+		</Container>
   );
 };
