@@ -511,10 +511,10 @@ export default () => {
     if (type === "blocks" && subtype) {
       Component = components[type][subtype]["elements"][name].component;
       return (
-        <AnimationRevealPage disabled>
-          <Component />
-        </AnimationRevealPage>
-      );
+			<AnimationRevealPage disabled>
+				<Component />
+			</AnimationRevealPage>
+		);
     } else Component = components[type][name].component;
 
     if (Component) return <Component />;
