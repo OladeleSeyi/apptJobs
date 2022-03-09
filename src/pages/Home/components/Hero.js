@@ -38,25 +38,10 @@ export default ({
 		</>
 	),
 
-	// <PrimaryButton as="a" href={primaryButtonUrl}>
-	//           {primaryButtonText}
-	//         </PrimaryButton>
-
 	primaryButtonText = 'Get Started',
 	primaryButtonUrl = 'https://wa.me/message/H6LUUKPUCUEBN1',
 	buttonRounded = true,
 	Target = '_blank',
-
-	// span = (
-	// 	<button>
-	// 		<a
-	// 			href='https://wa.me/message/H6LUUKPUCUEBN1'
-	// 			target={'_blank'}
-	// 			rel='noreferrer'>
-	// 			Get Started
-	// 		</a>
-	// 	</button>
-	// ),
 
 	paragraph = 'Automate your Job Search On WhatsApp',
 
