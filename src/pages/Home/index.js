@@ -12,7 +12,7 @@ import macHeroScreenshotImageSrc from "images/hero-screenshot-2.png";
 import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
 
 import EmployeeForm from "./components/EmployeeForm";
-import Modal from "./components/Modal";
+// import Modal from "./components/Modal";
 import { pageDataOptions } from "./data";
 import EmployerForm from "./components/EmployerForm";
 
@@ -32,22 +32,22 @@ export default () => {
     }
     return false;
   };
-  const [showModal, setShowModal] = React.useState(checkModal);
+  // const [showModal, setShowModal] = React.useState(checkModal);
 
   // Set Appropriate UI Text
   const [{ hero, mainFeature }, setPageData] = React.useState(
     pageDataOptions.employee
   );
-  const chooseStatus = (bool) => {
-    if (bool) {
-      setIsEmployee(bool);
-      setPageData(pageDataOptions.employee);
-      return setShowModal(false);
-    }
-    setIsEmployee(bool);
-    setPageData(pageDataOptions.employer);
-    return setShowModal(false);
-  };
+  // const chooseStatus = (bool) => {
+  //   if (bool) {
+  //     setIsEmployee(bool);
+  //     setPageData(pageDataOptions.employee);
+  //     return setShowModal(false);
+  //   }
+  //   setIsEmployee(bool);
+  //   setPageData(pageDataOptions.employer);
+  //   return setShowModal(false);
+  // };
 
   React.useEffect(() => {
     window.localStorage.setItem("userType", isEmployee);
@@ -72,11 +72,11 @@ export default () => {
       {/* End Main Gist  */}
 
       {/* Modal */}
-      <Modal
+      {/* <Modal
         showModal={showModal}
         setShowModal={setShowModal}
         chooseStatus={chooseStatus}
-      />
+      /> */}
       {/* Modal */}
       {console.log("isemployee", isEmployee)}
       {isEmployee ? null : (
