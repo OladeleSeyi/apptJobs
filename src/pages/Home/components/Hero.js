@@ -30,7 +30,12 @@ export default ({
       <span tw="text-primary-500">Apply</span>
     </>
   ),
-  paragraph = "Automate your Job Search On WhatsApp Get Started",
+  paragraph = "Automate your Job Search On WhatsApp",
+  span = (
+    <a href="https://google.com">
+      <button>Get Started</button>
+    </a>
+  ),
   img = DesignIllustration,
 }) => {
   return (
@@ -40,6 +45,7 @@ export default ({
           <LeftColumn>
             <Heading>{heading}</Heading>
             <Paragraph>{paragraph}</Paragraph>
+            {span}
           </LeftColumn>
           <RightColumn>
             <IllustrationContainer>
