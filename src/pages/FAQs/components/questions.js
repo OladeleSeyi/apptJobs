@@ -7,10 +7,10 @@ import { SectionHeading } from 'components/misc/Headings.js';
 
 import { ReactComponent as SvgDecoratorBlob3 } from 'images/svg-decorator-blob-3.svg';
 
-import SupportIconImage from 'images/support-icon.svg';
+import whatsapp from 'images/whatsapp-faq.svg';
 import questionMark from 'images/question-mark.svg';
-
-import SimpleIconImage from 'images/simple-icon.svg';
+import naira from 'images/naira.svg';
+import resume from 'images/resume-icon.svg';
 
 const Container = tw.div`relative`;
 
@@ -66,19 +66,19 @@ export default () => {
 				'Appt Jobs delivers specific vacancies and career opportunities to individuals seeking jobs via Whatsapp.',
 		},
 		{
-			imageSrc: SimpleIconImage,
+			imageSrc: whatsapp,
 			title: 'Why Whatsapp?',
 			description:
 				'It is the preferred social messaging application. Appt Jobs aims to take the bulk off job hunting from the individual.',
 		},
 		{
-			imageSrc: SupportIconImage,
+			imageSrc: naira,
 			title: 'Do I have to pay for a Job?',
 			description:
 				'No payment will be made upfront, but as soon as you get a job you will be required to pay us a token of your renumeration.',
 		},
 		{
-			imageSrc: SupportIconImage,
+			imageSrc: resume,
 			title: 'Do I need a resume?',
 			description:
 				'Yes, your resume would be needed to explain your focus, qualifications and strengths.',
