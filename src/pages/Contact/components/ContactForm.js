@@ -45,64 +45,81 @@ const Phone = tw.a`text-sm mt-0 block text-gray-500 mt-4`;
 const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8`;
 
 export default ({
-  subheading = "Contact Us",
-  heading = (
-    <>
-      Feel free to <span tw="text-primary-500">get in touch</span>
-      <wbr /> with us.
-    </>
-  ),
-  description = "You can fill and submit the contact form and we will be with you shortly. You can also follow us on social media to stay updated.",
-  submitButtonText = "Send",
-  formAction = "#",
-  formMethod = "get",
-  textOnLeft = true,
+	subheading = 'Contact Us',
+	heading = (
+		<>
+			Feel free to <span tw='text-primary-500'>get in touch</span>
+			<wbr /> with us.
+		</>
+	),
+	description = 'You can fill and submit the contact form and we will be with you shortly. You can also follow us on social media to stay updated.',
+	submitButtonText = 'Send',
+	formAction = '#',
+	formMethod = 'get',
+	textOnLeft = true,
 }) => {
-  // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
+	// The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
-  return (
-    <Container>
-      <TwoColumn>
-        <ImageColumn>
-          <Image imageSrc={EmailIllustrationSrc} />
-          <SubColumn>
-            <SubTextContent>
-              <Subheading>CONTACT</Subheading>
-              <Description>
-                <Email href="mailto:apptjobs@gmail.com">
-                  apptjobs@gmail.com
-                </Email>
-                <Phone href="tel:+2349059442848">+2349059442848</Phone>
-              </Description>
-            </SubTextContent>
+	return (
+		<Container>
+			<TwoColumn>
+				<ImageColumn>
+					<Image imageSrc={EmailIllustrationSrc} />
+					<SubColumn>
+						<SubTextContent>
+							<Subheading>CONTACT</Subheading>
+							<Description>
+								<Email href='mailto:apptjobs@gmail.com'>
+									apptjobs@gmail.com
+								</Email>
+								<Phone href='tel:+2349059442848'>
+									+2349059442848
+								</Phone>
+							</Description>
+						</SubTextContent>
 
-            <SubTextContent>
-              <Subheading>Working Hours</Subheading>
-              <Description>9AM - 9PM, Mon to Fri</Description>
-            </SubTextContent>
-          </SubColumn>
-        </ImageColumn>
-        <TextColumn textOnLeft={textOnLeft}>
-          <TextContent>
-            {subheading && <Subheading>{subheading}</Subheading>}
-            <Heading>{heading}</Heading>
-            {description && <Description>{description}</Description>}
+						<SubTextContent>
+							<Subheading>Working Hours</Subheading>
+							<Description>9AM - 9PM, Mon to Fri</Description>
+						</SubTextContent>
+					</SubColumn>
+				</ImageColumn>
+				<TextColumn textOnLeft={textOnLeft}>
+					<TextContent>
+						{subheading && <Subheading>{subheading}</Subheading>}
+						<Heading>{heading}</Heading>
+						{description && (
+							<Description>{description}</Description>
+						)}
 
-            <Form action={formAction} method={formMethod}>
-              <Input type="text" name="name" placeholder="Full Name" />
-              <Input
-                type="email"
-                name="email"
-                placeholder="Your Email Address"
-              />
+						<Form action={formAction} method={formMethod}>
+							<Input
+								type='text'
+								name='name'
+								placeholder='Full Name'
+							/>
+							<Input
+								type='email'
+								name='email'
+								placeholder='Your Email Address'
+							/>
 
-              <Input type="text" name="subject" placeholder="Subject" />
-              <Textarea name="message" placeholder="Your Message Here" />
-              <SubmitButton type="submit">{submitButtonText}</SubmitButton>
-            </Form>
-          </TextContent>
-        </TextColumn>
-      </TwoColumn>
-    </Container>
-  );
+							<Input
+								type='text'
+								name='subject'
+								placeholder='Subject'
+							/>
+							<Textarea
+								name='message'
+								placeholder='Your Message Here'
+							/>
+							<SubmitButton type='submit'>
+								{submitButtonText}
+							</SubmitButton>
+						</Form>
+					</TextContent>
+				</TextColumn>
+			</TwoColumn>
+		</Container>
+	);
 };

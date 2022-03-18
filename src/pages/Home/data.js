@@ -11,7 +11,7 @@ export const pageDataOptions = {
 		hero: {
 			heading: (
 				<>
-					We <HighlightedText>Hunt</HighlightedText> you{' '}
+					We <HighlightedText>Hunt</HighlightedText>, you{' '}
 					<HighlightedText>Apply</HighlightedText>
 				</>
 			),
