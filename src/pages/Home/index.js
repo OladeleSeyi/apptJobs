@@ -121,7 +121,7 @@ export default () => {
 						imageSrc:
 							'https://uploads-ssl.webflow.com/5f85aa9f0cd6a73652e67ae3/5fac117173389882c60aeae7_testimonial.jpg',
 						heading: 'Amazing User Experience',
-						quote: 'I’d like to express my gratitude for your help over the past couple of months.I’ve been able to secure another job. The service you render is a good initiative and i hope you’re able to better serve more people that are seeking job opportunities just like i was. Thanks you once again. 🙏🏽',
+						quote: 'I’d like to express my gratitude for your help over the past couple of months.I’ve been able to secure another job. The service you render is a good initiative and I hope you’re able to better serve more people that are seeking job opportunities just like i was. Thanks you once again. 🙏🏽',
 						customerName: 'Latade Igbodipe ',
 						customerTitle: 'UI Designer, Crowdyvest',
 					},
