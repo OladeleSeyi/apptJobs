@@ -37,7 +37,10 @@ export default ({
 			<span tw='text-primary-500'>Apply</span>
 		</>
 	),
-	paragraph = 'Automate your Job Search On WhatsApp',
+	paragraph = 'Looking to change or begin your career? Appt Jobs is committed to making the process seamless.',
+
+	paragraph2 = 'An employer looking for a qualified candidate? We will send them your way.',
+
 	primaryButtonText = 'Get Started',
 	primaryButtonUrl = 'https://wa.me/message/H6LUUKPUCUEBN1',
 	buttonRounded = true,
@@ -53,6 +56,8 @@ export default ({
 					<LeftColumn>
 						<Heading>{heading}</Heading>
 						<Paragraph>{paragraph}</Paragraph>
+						<br />
+						<Paragraph>{paragraph2}</Paragraph>
 						<PrimaryButton
 							buttonRounded={buttonRounded}
 							as='a'
