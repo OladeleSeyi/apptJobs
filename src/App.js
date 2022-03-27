@@ -9,22 +9,27 @@ import About from "pages/About";
 import Contact from "pages/Contact";
 import Header from "components/custom/Header";
 import Footer from "components/custom/Footer";
+import FAQs from 'pages/FAQs';
 export default function App() {
-  return (
-    <Router>
-      <Header />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/about">
-          <About />
-        </Route>
-        <Route exact path="/contact">
-          <Contact />
-        </Route>
-      </Switch>
-      <Footer />
-    </Router>
-  );
+	return (
+		<Router>
+			<Header />
+			<Switch>
+				<Route exact path='/'>
+					<Home />
+				</Route>
+				<Route exact path='/about'>
+					<About />
+				</Route>
+				<Route exact path='/contact'>
+					<Contact />
+				</Route>
+				<Route exact path='/FAQs'>
+					<FAQs />
+				</Route>
+			</Switch>
+			<FAQs />
+			<Footer />
+		</Router>
+	);
 }
