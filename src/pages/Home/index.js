@@ -11,10 +11,10 @@ import CTA from "./components/CTA";
 import macHeroScreenshotImageSrc from "images/hero-screenshot-2.png";
 import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
 
-import EmployeeForm from "./components/EmployeeForm";
+// import EmployeeForm from "./components/EmployeeForm";
 // import Modal from "./components/Modal";
 import { pageDataOptions } from "./data";
-import EmployerForm from "./components/EmployerForm";
+// import EmployerForm from "./components/EmployerForm";
 
 // Styled Components
 const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
@@ -105,7 +105,7 @@ export default () => {
 				/>
 			)}
 			{/* Form  */}
-			{isEmployee ? <EmployeeForm /> : <EmployerForm />}
+			{/* {isEmployee ? <EmployeeForm /> : <EmployerForm />} */}
 			{/* <EmployeeForm /> */}
 			{/* End Form  */}
 
