@@ -89,7 +89,7 @@ export default () => {
         chooseStatus={chooseStatus}
       /> */}
 			{/* Modal */}
-			{console.log('isemployee', isEmployee)}
+			{/* {console.log('isemployee', isEmployee)}
 			{isEmployee ? null : (
 				<FeatureWithSteps
 					subheading={<Subheading>STEPS</Subheading>}
@@ -103,7 +103,7 @@ export default () => {
 					imageDecoratorBlob={true}
 					decoratorBlobCss={tw`xl:w-40 xl:h-40 opacity-15 -translate-x-1/2 left-1/2`}
 				/>
-			)}
+			)} */}
 			{/* Form  */}
 			{/* {isEmployee ? <EmployeeForm /> : <EmployerForm />} */}
 			{/* <EmployeeForm /> */}
