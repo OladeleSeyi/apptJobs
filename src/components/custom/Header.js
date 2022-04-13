@@ -12,7 +12,7 @@ import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 
 const Header = tw.header`
   flex justify-between items-center
-  max-w-screen-xl mx-auto
+  max-w-screen-xl mx-auto p-4
 `;
 
 export const NavLinks = tw.div`inline-block`;
@@ -79,18 +79,18 @@ export default ({
   const defaultLinks = [
     <NavLinks key={1}>
       <NavLink href="/about">About</NavLink>
-      <NavLink href="https://appticles.substack.com/" target="_blank">
+      {/* <NavLink href="https://appticles.substack.com/" target="_blank">
         Blog
-      </NavLink>
+      </NavLink> */}
       <NavLink href="/contact">Contact Us</NavLink>
       <NavLink href="/FAQs">FAQs</NavLink>
-      <PrimaryLink href="#">Register</PrimaryLink>
-      {/* <NavLink href="/#" tw="lg:ml-12!">
+      {/* <PrimaryLink href="#">Register</PrimaryLink> */}
+      <NavLink href="/#" tw="lg:ml-12!">
         Login
       </NavLink>
       <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">
         Sign Up
-      </PrimaryLink> */}
+      </PrimaryLink>
     </NavLinks>,
   ];
 

@@ -5,15 +5,17 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Hero from "./components/Hero";
 
 import MainFeature2 from "./components/About";
-import FeatureWithSteps from "./components/Steps";
 import Testimonial from "components/testimonials/TwoColumnWithImage";
 import CTA from "./components/CTA";
-import macHeroScreenshotImageSrc from "images/hero-screenshot-2.png";
+
+// import macHeroScreenshotImageSrc from "images/hero-screenshot-2.png";
 import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
 // import Modal from "./components/Modal";
 import { pageDataOptions } from "./data";
 // Styled Components
-const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
+
+// const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
+
 const HighlightedText = tw.span`text-primary-500`;
 
 export default () => {
@@ -46,14 +48,6 @@ export default () => {
         features={[]}
       />
       {/* End Main Gist  */}
-
-      {/* Modal */}
-      {/* <Modal
-        showModal={showModal}
-        setShowModal={setShowModal}
-        chooseStatus={chooseStatus}
-      /> */}
-      {/* Modal */}
 
       <Testimonial
         heading={
