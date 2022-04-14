@@ -7,6 +7,7 @@ import { ReactComponent as InstagramIcon } from "images/instagram-icon.svg";
 import { ReactComponent as TwitterIcon } from "images/twitter-icon.svg";
 import { ReactComponent as LinkedinIcon } from "images/linkedin-icon.svg";
 import { ReactComponent as WhatsappIcon } from "images/whatsapp-icon.svg";
+import { ReactComponent as facebookIcon } from 'images/facebook.svg';
 
 // styled components
 const Container = tw(ContainerBase)`bg-gray-900 text-gray-100 -mx-8 -mb-8`;
@@ -23,15 +24,15 @@ const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border
 
 const SocialLinksContainer = tw.div`mt-10`;
 const SocialLink = styled.a`
-  ${tw`cursor-pointer inline-block text-gray-100 hover:text-gray-500 transition duration-300 mx-4`}
-  svg {
-    ${tw`w-5 h-5`}
-  }
+	${tw`cursor-pointer inline-block text-gray-100 hover:text-gray-500 transition duration-300 mx-4`}
+	svg {
+		${tw`w-5 h-5`}
+	}
 `;
 
 const CopyrightText = tw.p`text-center mt-10 font-medium tracking-wide text-sm text-gray-600`;
 export default () => {
-  return (
+	return (
 		<Container>
 			<Content>
 				<Row>
@@ -42,7 +43,8 @@ export default () => {
 					<LinksContainer>
 						<Link href='#'>Home</Link>
 						<Link href='#'>About</Link>
-						<Link href='#'>Blog</Link>
+						{/* <Link href='#'>Blog</Link> */}
+						<Link href='#'>Contact Us</Link>
 						<Link href='#'>Contact Us</Link>
 					</LinksContainer>
 					<SocialLinksContainer>
@@ -58,6 +60,9 @@ export default () => {
 						<SocialLink href='https://www.linkedin.com/company/appt-jobs'>
 							<LinkedinIcon />
 						</SocialLink>
+						<SocialLink href='https://m.facebook.com/apptjobs'>
+							<facebookIcon />
+						</SocialLink>
 					</SocialLinksContainer>
 					<CopyrightText>
 						&copy; Copyright 2021, APPT Jobs . All Rights Reserved.
@@ -65,5 +70,5 @@ export default () => {
 				</Row>
 			</Content>
 		</Container>
-  );
+	);
 };

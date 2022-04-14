@@ -79,10 +79,8 @@ export default ({
 	const defaultLinks = [
 		<NavLinks key={1}>
 			<NavLink href='/about'>About</NavLink>
-			<NavLink href='https://appticles.substack.com/' target='_blank'>
-				Blog
-			</NavLink>
 			<NavLink href='/contact'>Contact Us</NavLink>
+			<NavLink href='/DataPrivacy'>Data Privacy</NavLink>
 			<NavLink href='/FAQs'>FAQs</NavLink>
 
 			{/* <NavLink href="/#" tw="lg:ml-12!">
