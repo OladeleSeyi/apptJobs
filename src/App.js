@@ -28,7 +28,6 @@ export default function App() {
 					<FAQs />
 				</Route>
 			</Switch>
-			<FAQs />
 			<Footer />
 		</Router>
 	);

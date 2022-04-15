@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styled from 'styled-components';
 import tw from 'twin.macro';
@@ -159,41 +159,115 @@ export default () => {
 	 *  If a key for a particular card is not provided, a default value is used
 	 */
 
+	const [readMore, setReadMore] = useState(false);
+	const linkName = readMore ? 'Read Less << ' : 'Read More >> ';
+
 	const cards = [
 		{
 			imageSrc: questionMark,
 			title: 'What is Appt Jobs?',
-			description: whatIsApptFaq,
+			description: (
+				<div>
+					<button
+						onClick={() => {
+							setReadMore(!readMore);
+						}}>
+						<h2>{linkName}</h2>
+					</button>
+					{readMore && whatIsApptFaq}
+				</div>
+			),
 		},
 		{
 			imageSrc: resume,
 			title: 'Do I need a CV, Cover Letter?',
-			description: cvFaq,
+			description: (
+				<div>
+					<button
+						onClick={() => {
+							setReadMore(!readMore);
+						}}>
+						<h2>{linkName}</h2>
+					</button>
+					{readMore && cvFaq}
+				</div>
+			),
 		},
 		{
 			imageSrc: whatsapp,
 			title: 'Why Whatsapp?',
-			description: whyWhatsappFaq,
+			description: (
+				<div>
+					<button
+						onClick={() => {
+							setReadMore(!readMore);
+						}}>
+						<h2>{linkName}</h2>
+					</button>
+					{readMore && whyWhatsappFaq}
+				</div>
+			),
 		},
 		{
 			imageSrc: start,
 			title: 'How do I start?',
-			description: startFaq,
-		},
-		{
-			imageSrc: money,
-			title: 'Do I have to pay for a Job?',
-			description: howMuchFaq,
+			description: (
+				<div>
+					<button
+						onClick={() => {
+							setReadMore(!readMore);
+						}}>
+						<h2>{linkName}</h2>
+					</button>
+					{readMore && startFaq}
+				</div>
+			),
 		},
 		{
 			imageSrc: infinity,
 			title: 'How many jobs vacancies will I receive?',
-			description: howManyFaq,
+			description: (
+				<div>
+					<button
+						onClick={() => {
+							setReadMore(!readMore);
+						}}>
+						<h2>{linkName}</h2>
+					</button>
+					{readMore && howManyFaq}
+				</div>
+			),
 		},
+		{
+			imageSrc: money,
+			title: 'Do I have to pay for a Job?',
+			description: (
+				<div>
+					<button
+						onClick={() => {
+							setReadMore(!readMore);
+						}}>
+						<h2>{linkName}</h2>
+					</button>
+					{readMore && howMuchFaq}
+				</div>
+			),
+		},
+
 		{
 			imageSrc: naira,
 			title: 'Do I have to pay once I secure a job?',
-			description: <div>urgnenrgneirnirg</div>,
+			description: (
+				<div>
+					<button
+						onClick={() => {
+							setReadMore(!readMore);
+						}}>
+						<h2>{linkName}</h2>
+					</button>
+					{readMore && payFaq}
+				</div>
+			),
 		},
 	];
 

@@ -15,6 +15,7 @@ import EmployeeForm from "./components/EmployeeForm";
 // import Modal from "./components/Modal";
 import { pageDataOptions } from "./data";
 import EmployerForm from "./components/EmployerForm";
+import FAQs from 'pages/FAQs';
 
 // Styled Components
 const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
@@ -145,6 +146,7 @@ export default () => {
 			/>
 			{/* Testimonial */}
 			<CTA />
+			<FAQs />
 		</AnimationRevealPage>
 	);
 };;
