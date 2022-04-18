@@ -33,6 +33,7 @@ const SocialLink = styled.a`
 const CopyrightText = tw.p`text-center mt-10 font-medium tracking-wide text-sm text-gray-600`;
 export default () => {
 	return (
+
 		<Container>
 			<Content>
 				<Row>
@@ -43,8 +44,7 @@ export default () => {
 					<LinksContainer>
 						<Link href='#'>Home</Link>
 						<Link href='#'>About</Link>
-						{/* <Link href='#'>Blog</Link> */}
-						<Link href='#'>Contact Us</Link>
+
 						<Link href='#'>Contact Us</Link>
 					</LinksContainer>
 					<SocialLinksContainer>
@@ -63,6 +63,7 @@ export default () => {
 						<SocialLink href='https://m.facebook.com/apptjobs'>
 							<facebookIcon />
 						</SocialLink>
+
 					</SocialLinksContainer>
 					<CopyrightText>
 						&copy; Copyright 2021, APPT Jobs . All Rights Reserved.
