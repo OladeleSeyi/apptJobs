@@ -105,8 +105,8 @@ const cvFaq = [
 				Yes, they are by default necessary for job applications to give
 				an edge. <br /> Create a winning CV{' '}
 				<a href='https://flowcv.io/'>here</a> <br />
-				Contact our Customer Support for a winning Cover Letter{' '}
-				<a href='#'>here</a> <br />
+				Contact our Customer Support for a winning Cover Letter
+				<a href='https://wa.me/message/H6LUUKPUCUEBN1'>here</a> <br />
 				Cover Letter is best sent as the body of the mail, not as an
 				attached document, did you know that?
 			</p>
