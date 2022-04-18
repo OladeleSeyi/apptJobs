@@ -13,7 +13,7 @@ import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
 // import Modal from "./components/Modal";
 import { pageDataOptions } from "./data";
 // Styled Components
-import FAQs from 'pages/FAQs';
+// import FAQs from 'pages/FAQs';
 // const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
 
 const HighlightedText = tw.span`text-primary-500`;
