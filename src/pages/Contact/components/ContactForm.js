@@ -69,7 +69,7 @@ export default ({
 						<SubTextContent>
 							<Subheading>CONTACT</Subheading>
 							<Description>
-								<Email href='mailto:apptjobs@gmail.com'>
+								<Email href='mailto:hello@aptjobs.com '>
 									apptjobs@gmail.com
 								</Email>
 								<Phone href='tel:+2349059442848'>
