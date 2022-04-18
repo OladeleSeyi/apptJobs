@@ -18,19 +18,19 @@ import FAQs from 'pages/FAQs';
 
 const HighlightedText = tw.span`text-primary-500`;
 
-  					quote: 'I got the job from your servcice. Thank you for your impact',
-						customerName: 'John Etim',
-						customerTitle: 'Shoms Int. College',
-					},
-				]}
-			/>
-			{/* Testimonial */}
-			<CTA />
-			<FAQs />
-		</AnimationRevealPage>
-	);
-};;
-=======
+//   					quote: 'I got the job from your servcice. Thank you for your impact',
+// 						customerName: 'John Etim',
+// 						customerTitle: 'Shoms Int. College',
+// 					},
+// 				]}
+// 			/>
+// 			{/* Testimonial */}
+// 			<CTA />
+// 			<FAQs />
+// 		</AnimationRevealPage>
+// 	);
+// };;
+// =======
 export default () => {
   // is the viewer an employee
   const [isEmployee] = React.useState(() =>
