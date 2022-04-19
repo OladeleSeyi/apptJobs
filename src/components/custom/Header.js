@@ -85,7 +85,7 @@ export default ({
       <NavLink href="/contact">Contact Us</NavLink>
       <NavLink href="/FAQs">FAQs</NavLink>
       {/* <PrimaryLink href="#">Register</PrimaryLink> */}
-      <NavLink href="/#" tw="lg:ml-12!">
+      <NavLink href="#" tw="lg:ml-12!">
         Login
       </NavLink>
       <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">
@@ -101,7 +101,7 @@ export default ({
   const defaultLogoLink = (
     <LogoLink href="/">
       <img src={logo} alt="logo" />
-      APPT JOBS
+      Appt Jobs
     </LogoLink>
   );
 
