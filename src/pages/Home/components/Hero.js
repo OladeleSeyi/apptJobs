@@ -37,9 +37,9 @@ export default ({
       <span tw="text-primary-500">Apply</span>
     </>
   ),
-  paragraph = "Looking to change or begin your career? Appt Jobs is committed to making the process seamless.",
+  paragraph = "Receive vacancies and opportunities alerts that match your career interests for your direct and quick application on WhatsApp.",
 
-  paragraph2 = "An Hunter looking for a qualified candidate? We will send them your way.",
+  paragraph2 = "",
 
   primaryButtonText = "Get Started",
   primaryButtonUrl = "https://wa.me/message/H6LUUKPUCUEBN1",
