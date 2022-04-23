@@ -15,7 +15,7 @@ const LeftColumn = tw.div`relative lg:w-5/12 text-center max-w-lg mx-auto lg:max
 const RightColumn = tw.div`relative mt-12 lg:mt-0 flex-1 flex flex-col justify-center lg:self-end`;
 
 const Heading = tw.h1`font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-900 leading-tight`;
-const Paragraph = tw.p`my-5 lg:my-8 text-base xl:text-lg`;
+const Paragraph = tw.h3`my-5 text-xl md:text-2xl lg:text-2xl xl:text-2xl text-gray-900`;
 
 const IllustrationContainer = tw.div`flex justify-center lg:justify-end items-center`;
 
