@@ -42,7 +42,6 @@ export default () => {
           <LinksContainer>
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
-            <Link href="https://appticles.substack.com/">Blog</Link>
             <Link href="/contact">Contact Us</Link>
             <Link href="/FAQs">FAQs</Link>
           </LinksContainer>
@@ -50,10 +49,10 @@ export default () => {
             <SocialLink href="https://wa.me/message/H6LUUKPUCUEBN1">
               <WhatsappIcon />
             </SocialLink>
-            <SocialLink href="https://twitter.com/apptjobs?s=21">
+            <SocialLink href="hhttps://instagram.com/apptjobs">
               <InstagramIcon />
             </SocialLink>
-            <SocialLink href="@ApptJobs">
+            <SocialLink href="https://twitter.com/ApptJobs">
               <TwitterIcon />
             </SocialLink>
             <SocialLink href="https://www.linkedin.com/company/appt-jobs">
