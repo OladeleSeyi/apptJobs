@@ -42,6 +42,7 @@ export default () => {
           <LinksContainer>
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
+            <Link href="/privacy">Privacy Policy</Link>
             <Link href="/contact">Contact Us</Link>
             <Link href="/FAQs">FAQs</Link>
           </LinksContainer>
