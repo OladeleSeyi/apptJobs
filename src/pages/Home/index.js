@@ -64,7 +64,7 @@ export default () => {
       />
       {/* End Main Gist  */}
 
-      <Testimonial
+      {/* <Testimonial
         heading={
           <>
             Our Clients <HighlightedText>Love Us.</HighlightedText>
@@ -98,7 +98,7 @@ export default () => {
             customerTitle: "Shoms Int. College",
           },
         ]}
-      />
+      /> */}
       {/* Testimonial */}
       <CTA />
     </AnimationRevealPage>
