@@ -8,6 +8,7 @@ import MainFeature2 from "./components/About";
 import Testimonial from "components/testimonials/TwoColumnWithImage";
 import CTA from "./components/CTA";
 
+
 // import macHeroScreenshotImageSrc from "images/hero-screenshot-2.png";
 import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
 // import Modal from "./components/Modal";
@@ -32,6 +33,7 @@ const HighlightedText = tw.span`text-primary-500`;
 // };;
 // =======
 export default () => {
+
   // is the viewer an employee
   const [isEmployee] = React.useState(() =>
     JSON.parse(window.localStorage.getItem("userType"))
