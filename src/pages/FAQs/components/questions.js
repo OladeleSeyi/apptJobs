@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+
 
 import styled from "styled-components";
 import tw from "twin.macro";
@@ -103,18 +104,22 @@ const howMuchFaq = [
 ];
 
 const cvFaq = [
-  <div>
-    {
-      <p>
-        Yes, they are by default necessary for job applications to give an edge.{" "}
-        <br /> Create a winning CV <a href="https://flowcv.io/">here</a> <br />
-        Contact our Customer Support for a winning Cover Letter
-        <a href="https://wa.me/message/H6LUUKPUCUEBN1">here</a> <br />
-        Cover Letter is best sent as the body of the mail, not as an attached
-        document, did you know that?
-      </p>
-    }
-  </div>,
+	<div>
+		{
+			<p>
+				Yes, they are by default necessary for job applications to give
+				an edge. <br /> Create a winning CV{' '}
+				<a href='https://flowcv.io/'>here</a> <br />
+  
+				Contact our Customer Support for a winning Cover Letter
+				<a href='https://wa.me/message/H6LUUKPUCUEBN1'>here</a> <br />
+
+				Cover Letter is best sent as the body of the mail, not as an
+				attached document, did you know that?
+			</p>
+		}
+	</div>,
+
 ];
 
 const startFaq = [
@@ -163,6 +168,7 @@ export default () => {
 
   const [readMore, setReadMore] = useState(false);
   const linkName = readMore ? "Read Less << " : "Read More >> ";
+
 
   const cards = [
     {
@@ -261,7 +267,6 @@ export default () => {
         </div>
       ),
     },
-
     {
       imageSrc: naira,
       title: "Do I have to pay once I secure a job?",
