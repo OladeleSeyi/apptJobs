@@ -5,7 +5,7 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Hero from "./components/Hero";
 
 import MainFeature2 from "./components/About";
-// import Testimonial from "components/testimonials/TwoColumnWithImage";
+import Testimonial from "components/testimonials/TwoColumnWithImage";
 import CTA from "./components/CTA";
 
 // import macHeroScreenshotImageSrc from "images/hero-screenshot-2.png";
@@ -16,7 +16,7 @@ import { pageDataOptions } from "./data";
 // import FAQs from 'pages/FAQs';
 // const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
 
-// const HighlightedText = tw.span`text-primary-500`;
+const HighlightedText = tw.span`text-primary-500`;
 
 //   					quote: 'I got the job from your servcice. Thank you for your impact',
 // 						customerName: 'John Etim',
@@ -62,7 +62,7 @@ export default () => {
       />
       {/* End Main Gist  */}
 
-      {/* <Testimonial
+      <Testimonial
         heading={
           <>
             Our Clients <HighlightedText>Love Us.</HighlightedText>
@@ -96,7 +96,7 @@ export default () => {
             customerTitle: "Shoms Int. College",
           },
         ]}
-      /> */}
+      />
       {/* Testimonial */}
       <CTA />
     </AnimationRevealPage>
