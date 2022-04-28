@@ -9,31 +9,30 @@ import About from "pages/About";
 import Contact from "pages/Contact";
 import Header from "components/custom/Header";
 import Footer from "components/custom/Footer";
-import FAQs from 'pages/FAQs';
-import DataPrivacy from 'pages/DataPrivacy';
+import FAQs from "pages/FAQs";
+import DataPrivacy from "pages/DataPrivacy";
 export default function App() {
-	return (
-		<Router>
-			<Header />
-			<Switch>
-				<Route exact path='/'>
-					<Home />
-				</Route>
-				<Route exact path='/about'>
-					<About />
-				</Route>
-				<Route exact path='/contact'>
-					<Contact />
-				</Route>
-				<Route exact path='/DataPrivacy'>
-					<DataPrivacy />
-				</Route>
-				<Route exact path='/FAQs'>
-					<FAQs />
-				</Route>
-			</Switch>
-			<FAQs />
-			<Footer />
-		</Router>
-	);
+  return (
+    <Router>
+      <Header />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/about">
+          <About />
+        </Route>
+        <Route exact path="/contact">
+          <Contact />
+        </Route>
+        <Route exact path="/DataPrivacy">
+          <DataPrivacy />
+        </Route>
+        <Route exact path="/FAQs">
+          <FAQs />
+        </Route>
+      </Switch>
+      <Footer />
+    </Router>
+  );
 }

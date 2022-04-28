@@ -12,6 +12,7 @@ import CTA from "./components/CTA";
 import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
 // import Modal from "./components/Modal";
 import { pageDataOptions } from "./data";
+import FAQs from "pages/FAQs";
 // Styled Components
 // import FAQs from 'pages/FAQs';
 // const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
@@ -86,6 +87,7 @@ export default () => {
       /> */}
       {/* Testimonial */}
       <CTA />
+      <FAQs />
     </AnimationRevealPage>
   );
 };
