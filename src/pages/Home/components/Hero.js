@@ -33,11 +33,11 @@ export default ({
   roundedHeaderButton,
   heading = (
     <>
-      We <span tw="text-primary-500">Hunt</span> you
+      We <span tw="text-primary-500">hunt</span> you
       <span tw="text-primary-500">Apply</span>
     </>
   ),
-  paragraph = "Receive vacancies and opportunities alerts that match your career interests for your direct and quick application on WhatsApp.",
+  paragraph = "Receive vacancies and opportunities that match your career interests for your direct and quick application on WhatsApp.",
 
   paragraph2 = "",
 
@@ -69,7 +69,7 @@ export default ({
           <RightColumn>
             <IllustrationContainer>
               <img
-                tw="min-w-0 w-full max-w-lg xl:max-w-3xl"
+                tw="min-w-0 w-full max-w-lg xl:max-w-3xl xl:invisible "
                 src={img}
                 alt="Design Illustration"
               />

@@ -34,15 +34,15 @@ const DecoratorBlob2 = tw(
 )`absolute top-0 right-0 w-80 h-80 transform  translate-x-20 -translate-y-64 text-primary-500 opacity-5`;
 export default ({
   subheading = "Interested in Appt ?",
-  heading = "Start recieving preferred vacancies",
-  primaryLinkText = "Seekers",
+  heading = "Start receiving preferred vacancies",
+  primaryLinkText = "Get Started",
   primaryLinkUrl = "https://wa.me/message/H6LUUKPUCUEBN1",
   // secondaryLinkText = 'Hunters',
   // secondaryLinkUrl = 'https://wa.me/message/H6LUUKPUCUEBN1',
   pushDownFooter = true,
 }) => {
   return (
-    <Container css={pushDownFooter && tw`mb-20 lg:mb-24`}>
+    <Container css={pushDownFooter && tw`mb-10 lg:mb-12`}>
       <ContentWithPaddingXl>
         <PrimaryBackgroundContainer>
           <Row>
