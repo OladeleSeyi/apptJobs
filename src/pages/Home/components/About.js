@@ -39,7 +39,7 @@ const Subheading = tw(SubheadingBase)`text-center md:text-left`;
 const Heading = tw(
   SectionHeading
 )`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
-const Description = tw.p`mt-8 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
+const Description = tw.p`mt-8 text-center text-xl md:text-2xl lg:text-2xl xl:text-2xl font-medium leading-relaxed text-secondary-100`;
 
 const Features = tw.div`mx-auto md:mx-0 flex flex-col lg:flex-row max-w-xs lg:max-w-none`;
 const Feature = tw.div`mt-10 lg:mt-8 flex items-center md:items-start flex-col md:mr-8 last:mr-0`;
