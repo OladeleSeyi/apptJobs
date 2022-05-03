@@ -86,8 +86,8 @@ export default () => {
         ]}
       /> */}
       {/* Testimonial */}
-      <CTA />
       <FAQs />
+      <CTA />
     </AnimationRevealPage>
   );
 };
