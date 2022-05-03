@@ -78,12 +78,12 @@ export default ({
    */
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/about">About</NavLink>
+      <NavLink href="#about">About</NavLink>
       {/* <NavLink href="https://appticles.substack.com/" target="_blank">
         Blog
       </NavLink> */}
       <NavLink href="/contact">Contact Us</NavLink>
-      <NavLink href="/FAQs">FAQs</NavLink>
+      <NavLink href="#faqs">FAQs</NavLink>
       <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">
         Sign In
       </PrimaryLink>

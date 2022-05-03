@@ -41,10 +41,10 @@ export default () => {
           </LogoContainer>
           <LinksContainer>
             <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
+            <Link href="#about">About</Link>
             <Link href="/privacy">Privacy Policy</Link>
             <Link href="/contact">Contact Us</Link>
-            <Link href="/FAQs">FAQs</Link>
+            <Link href="#faqs">FAQs</Link>
           </LinksContainer>
           <SocialLinksContainer>
             <SocialLink href="https://wa.me/message/H6LUUKPUCUEBN1">

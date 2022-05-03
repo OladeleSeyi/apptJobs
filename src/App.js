@@ -25,7 +25,7 @@ export default function App() {
         <Route exact path="/contact">
           <Contact />
         </Route>
-        <Route exact path="/DataPrivacy">
+        <Route exact path="/privacy">
           <DataPrivacy />
         </Route>
         <Route exact path="/FAQs">

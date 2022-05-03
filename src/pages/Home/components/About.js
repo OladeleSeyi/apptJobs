@@ -112,7 +112,7 @@ export default ({
   if (!features) features = defaultFeatures;
 
   return (
-    <Container>
+    <Container id="about">
       <TwoColumn>
         <ImageColumn>
           <Image

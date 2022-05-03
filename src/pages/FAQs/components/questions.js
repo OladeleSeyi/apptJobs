@@ -171,7 +171,7 @@ export default () => {
   ];
 
   return (
-    <Container>
+    <Container id="faqs">
       <ThreeColumnContainer>
         <Heading>Frequently Asked Questions</Heading>
         {cards.map((card, i) => (
