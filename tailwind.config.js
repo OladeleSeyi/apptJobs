@@ -266,7 +266,7 @@ module.exports = {
       DEFAULT: "1",
     },
     fontFamily: {
-      display: ["Inter", "system-ui"],
+      display: ["Helvetica Neue", "system-ui"],
       sans: [
         "system-ui",
         "-apple-system",
