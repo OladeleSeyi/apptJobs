@@ -32,7 +32,7 @@ const DecoratorBlob = styled(SvgDecoratorBlob3)`
 `;
 
 const whatIsApptFaq = [
-  <div>
+  <>
     {
       <p>
         Appt Jobs delivers matching vacancies and opportunities related to your
@@ -45,22 +45,22 @@ const whatIsApptFaq = [
         job hunting each week and be the first to know about new offers.
       </p>
     }{" "}
-  </div>,
+  </>,
 ];
 
 const whyWhatsappFaq = [
-  <div>
+  <>
     {
       <p>
         For your easy and quick application as it is the preferred social
         messaging application
       </p>
     }
-  </div>,
+  </>,
 ];
 
 const howMuchFaq = [
-  <div>
+  <>
     {
       <p>
         Receive vacancies and career opportunities directly to your WhatsApp.
@@ -68,11 +68,11 @@ const howMuchFaq = [
         experience. No extra costs, no salary cuts.
       </p>
     }
-  </div>,
+  </>,
 ];
 
 const cvFaq = [
-  <div>
+  <>
     {
       <p>
         Yes, they are by default necessary for job applications to give an edge.{" "}
@@ -83,11 +83,11 @@ const cvFaq = [
         document, did you know that?
       </p>
     }
-  </div>,
+  </>,
 ];
 
 const startFaq = [
-  <div>
+  <>
     {
       <p>
         You can easily register by clicking on{" "}
@@ -95,11 +95,11 @@ const startFaq = [
         register or on the Webpage.
       </p>
     }
-  </div>,
+  </>,
 ];
 
 const howManyFaq = [
-  <div>
+  <>
     {
       <p>
         Vacancies and opportunities are based on availability. Once there is an
@@ -107,18 +107,18 @@ const howManyFaq = [
         receive are tailored specifically to your career interest.
       </p>
     }
-  </div>,
+  </>,
 ];
 
 const payFaq = [
-  <div>
+  <>
     {
       <p>
         No, we do not take salary cuts or demand any form of future payment
         after job security.
       </p>
     }
-  </div>,
+  </>,
 ];
 
 export default () => {
@@ -129,6 +129,8 @@ export default () => {
    *  3) description - the description of the card
    *  If a key for a particular card is not provided, a default value is used
    */
+
+  // TODO : give the elements keys
 
   const cards = [
     {
@@ -173,7 +175,7 @@ export default () => {
       <ThreeColumnContainer>
         <Heading>Frequently Asked Questions</Heading>
         {cards.map((card, i) => (
-          <Question card={card} />
+          <Question key={i} card={card} />
         ))}
       </ThreeColumnContainer>
       <DecoratorBlob />

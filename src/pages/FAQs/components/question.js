@@ -44,7 +44,7 @@ export default ({ card }) => {
         <span className="textContainer">
           <span className="title">{card.title}</span>
           <p className="description">
-            <div>
+            <span>
               <PrimaryButton
                 onClick={() => {
                   setReadMore(!readMore);
@@ -53,7 +53,7 @@ export default ({ card }) => {
                 <h2>{linkName}</h2>
               </PrimaryButton>
               {readMore && card.description}
-            </div>
+            </span>
           </p>
         </span>
       </Card>
