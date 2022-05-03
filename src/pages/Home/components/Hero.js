@@ -10,9 +10,9 @@ import DesignIllustration from "images/design-illustration-2.svg";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 
 const Container = tw.div`relative`;
-const TwoColumn = tw.div`flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
+const TwoColumn = tw.div`flex-none md:flex md:flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-10 md:py-24`;
 const LeftColumn = tw.div`relative lg:w-5/12 text-center max-w-lg mx-auto lg:max-w-none lg:text-left`;
-const RightColumn = tw.div`relative mt-12 lg:mt-0 flex-1 flex flex-col justify-center lg:self-end`;
+const RightColumn = tw.div`relative hidden  mt-12 lg:mt-0 flex-1 md:flex flex-col justify-center lg:self-end`;
 
 const Heading = tw.h1`font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-900 leading-tight`;
 const Paragraph = tw.h3`my-5 text-xl md:text-2xl lg:text-2xl xl:text-2xl text-gray-900`;
@@ -67,9 +67,9 @@ export default ({
             </PrimaryButton>
           </LeftColumn>
           <RightColumn>
-            <IllustrationContainer>
+            <IllustrationContainer tw="invisible md:visible">
               <img
-                tw="min-w-0 w-full max-w-lg xl:max-w-3xl xl:invisible "
+                tw="min-w-0 w-full max-w-lg xl:max-w-3xl invisible md:visible"
                 src={img}
                 alt="Design Illustration"
               />
